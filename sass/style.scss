@@ -1,0 +1,405 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
+@import "libs/mixins.scss";
+@import "libs/responsives.scss";
+
+
+$primary:#182F73;
+$secondary: #dbdbdb;
+$tertiary:  #99e2d0;
+$white: #fff;
+$black: #000;
+
+$bordbox: 1px solid $primary;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Roboto', cursive, sans-serif;
+    color: $primary;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+
+}
+    
+.block-page {
+    width: 100%;
+}
+
+.entete {
+    width: 80%;
+    height: 30hv;
+    position: relative;
+    margin: auto;
+    padding: 1rem;
+    background-attachment: fixed;
+    background-image: url('images/pexels-pixabay-163185.jpg');
+    background-color: $white;
+    @media #{$small-down} {
+        width: 100%;
+    }
+    &__logo__grand {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        & img {
+            width: 50%;
+            min-width: 200px;
+            display: block;
+            margin: auto;
+
+        }
+    }
+    &__logo {
+        width: 40%;
+        margin-left: -1rem;
+        text-align: left;
+        & img {
+            width: 50%;
+            min-width: 200px;
+        }
+        @media #{$small-down} {
+            margin: auto;
+            text-align: center;
+        }
+    }
+    &__panier i {
+        display: none;
+        @media #{$small-down} {
+            display: block;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.2rem;
+            padding: 0.7rem;
+            font-size: 1.5rem;
+            background: $tertiary;
+            border-radius: 0 0.5rem 0 0.5rem;  
+        }
+        &:hover {
+            @media #{$small-down} {
+            background: $primary;
+            color: $white;
+            }
+        }
+        &:active {
+            @media #{$small-down} {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.nav {
+    width: 80%;
+    margin: auto;
+    @media #{$small-down} {
+        width: 100%;
+        margin: 0;
+    }
+    &__btn {
+        display: none;
+    }
+    &__label {
+        display: none;
+        width: 15wv;
+        height: 30hv;
+        font-size: x-large;
+        color: $primary;
+        padding: 0.5rem 0.8rem;
+        @media #{$small-down} {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 1.5rem 0 0 0.6rem;
+            background: $tertiary;
+            border-radius: 0 0.5rem 0 0.5rem;
+        }
+        &:hover {
+            cursor: pointer;
+            background: $primary;
+            color: $white;
+        }
+        &:active {
+            color: $primary;
+        }
+    }
+
+    &__menu {
+        @media #{$small-down} {
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            width: 40%;
+            margin-left: -40%;
+            transition: all 0.4s ease-in-out;
+        }
+        &__list {
+            list-style: none;
+            background: $tertiary;
+            display: flex;
+            justify-content: flex-start;
+            @media #{$small-down} {
+                background: none;
+                flex-direction: column;
+                margin-top: 0.2rem;
+                margin-left: 0.6rem;             
+            }
+            &__link {
+                display: block;
+                padding: 1rem 1.25rem;
+                text-decoration: none;
+                color: $primary;
+                text-align: left;
+                border-radius: 0 0.6rem 0.6rem 0;
+                border-right: 2px solid $white;
+                @media #{$small-down} {
+                    background: $tertiary;
+                    border-radius: 0 0.6rem 0 0.6rem;
+                    border-top: 1px solid $white;
+                }
+            }
+            & a:hover {
+                background: $primary;
+                color: $white;
+            }
+            & a:active {
+                color: $white;
+            }
+        } 
+    }
+    
+}
+
+@media #{$small-down} {
+    .nav__btn:checked ~ .nav__menu {
+    margin-left: 0;
+    }
+}
+
+.card {
+    width: 80%;
+    margin: auto;
+    background-color: rgba($secondary, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    @media #{$small-down} {
+        width: 100%;
+    }
+    &__heading {
+        font-size: 2.2rem;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        @media #{$small-down} {
+            font-size: 2rem;
+            margin: 0.5rem 1.5rem;
+        }
+    }
+    &__subtitre{
+        font-size: 1.8rem;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        @media #{$small-down} {
+            font-size: 1.4rem;
+            margin: 0 1.5rem;
+        }
+    }
+    &__link {
+        background-color: $white;
+        width: 30%;
+        max-width: 450px;
+        height: 280px;
+        border-radius: 0 0.6rem 0 0.6rem;
+        margin: 1.5rem 0.5rem;
+        padding: 0.5rem;
+        box-shadow: 0 3px 3px rgba($primary, 0.2);
+        position: relative;
+        border: $bordbox;
+        @media #{$small-down} {
+            width: 90%;
+        }
+        .card__box img {
+            width: 100%;
+            align-items: center;
+            height: 190px;
+            border-radius: 0 0.6rem 0 0.6rem;
+            border: $bordbox;
+            margin-bottom: 0;
+        }
+        @supports(object-fit: cover) {
+            .card__box img {
+                object-fit: cover;
+                object-position: center; 
+            }
+        }
+        .card__caption {
+            width: 100%;
+            height: 70px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__bouton {
+                position: absolute;
+                bottom: -0.4rem;
+                right: 1rem;
+                border: $bordbox;
+                border-radius: 0 0.3rem 0 0.3rem;
+                background: $tertiary;
+                color: $primary;
+                font-size: 0.95rem;
+                font-weight: 700;
+                padding: 0.3rem;
+                &:hover {
+                    cursor: pointer;
+                    background: $primary;
+                    color: $white;
+                }
+            }
+        }
+        .card__text > * {
+            margin: 0.1rem 0 0 0;
+        }
+        .card__text h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            padding: 0;
+        }
+    }
+}
+
+.card01 {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    border: $bordbox;
+    border-radius: 0 0.8rem 0 0.8rem;
+    box-shadow: 0 3px 3px rgba($primary, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    @media #{$small-down} {
+        width: 100%;
+    }
+    &__box {
+        width: 40%;
+        height: 250px;
+        margin: 0.5rem;
+        @media #{$small-down} {
+            width: 90%;
+        }
+    }
+    &__box img {
+        width: 100%;
+        border: $bordbox;
+        border-radius: 0 0.8rem 0 0.8rem;
+    }
+    @supports(object-fit: cover) {
+        .card01__box img {
+            object-fit: cover;
+            object-position: center; 
+        }
+    }
+    &__fiche {
+        width: 55%;
+        margin: 0;
+        padding: 0.5rem 0 0.5rem 0;
+        &__marque {
+            font-size: 1.5rem;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 0.3rem;
+            @media #{$small-down} {
+                font-size: 1.8rem;
+                margin: 0.5rem 1.5rem;
+            }
+        }
+        &__texte {
+            width: 100%;
+            height: 2rem;
+            font-size: 0.8rem;
+            margin-bottom: 0.4rem;
+        }
+    }
+}
+
+.card01__fiche__btn {
+    font-size: 700;
+    font-weight: bold;
+    width: 8rem;
+    height: 2.5rem;
+    color: $primary;
+    border: 0;
+    border-radius: 0 0.6rem 0.6rem 0;
+    background: $tertiary;
+    &:hover {
+        cursor: pointer;
+        background: $primary;
+        color: $white;
+    }
+}
+
+.pied {
+    width: 80%;
+    margin: auto;
+    background-color: $tertiary;
+    margin-bottom: 0.8rem;
+    @media #{$small-down} {
+        width: 100%;
+        background-color: $tertiary;
+        padding: 1rem;
+    }
+
+    .pied-nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        @media #{$small-down} {
+            flex-direction: column;
+        }
+        li > a {
+            display: inline-block;
+            color: $primary;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin: 1rem 0.5rem;
+            padding: 0.5rem;
+            border-radius: 0 0.6rem 0 0.6rem;
+            @media #{$small-down} {
+                margin: 0.1rem;
+            }
+            &:hover {
+                color: $secondary;
+                background:$primary
+            }
+            &:visited {
+            color: $primary;
+            }
+        }
+    }
+}
+ 

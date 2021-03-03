@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta desciption="Faire des photos comme avant? Oriphoto est l'appspancation pour combler vos envies. Appareils photo vintage pour collectionneurs sur Oriphoto by Orinoco.">
+		<meta keywords="appareil photo vintage, outils pour les photograhes, photographie professionnelle, photographie amateur, appareil photo pour tous, photos à l'ancienne">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="sass/style.css" media="all">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <script src="https://kit.fontawesome.com/f03f98bc68.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="server.js" defer></script>
+		<script type="text/javascript" src="app.js" defer></script>
+		<script type="text/javascript" src="./controllers/camera.js" defer></script>
+		<script type="text/javascript" src="./models/Camera.js" defer></script>
+		<script type="text/javascript" src="./routes/camera.js" defer></script>
+
+		
+		<title>Panier | Oriphoto by Orinoco</title>
+	</head>
+	
+	<body>
+		<div class="block-page">
+			<!--Bloc header-->	
+			<header class="entete">
+				<div class="entete__logo__grand"><img src="logo/oriphoto_grand.png" alt="logo de l'application appareil photo vintage par oriphoto"></div>
+				<p class="entete__panier"><a href="panier.html"><i class="fas fa-shopping-cart"></i></a></p>
+			</header>
+			<!--Fin bloc header-->
+
+			<!--Block Navigation-->
+			<div class="nav">
+				<input type="checkbox" class="nav__btn" id="nav__btn">
+				<label for="nav__btn" class="nav__label"><i class="fas fa-bars nav__bars"></i></label>
+				<nav class="nav__menu" id="nav">
+					<ol class="nav__menu__list">
+						<li><a href="index.html" class="nav__menu__list__link"><i class="fas fa-camera-retro"></i> Boutique</a></li>
+						<li><a href="panier.html" class="nav__menu__list__link"><i class="fas fa-shopping-cart"></i> Panier</a></li>
+						<li><a href="commande.html" class="nav__menu__list__link"><i class="fas fa-edit"></i> Commande</a></li>
+					</ol>
+				</nav>
+			</div>
+			<!--Fin Block Navigation-->
+
+			<!--Block panier-->
+			<div>
+				<h1>Mon panier</h1>
+			</div>
+
+			<!--fin block panier-->
+
+
+
+
+
+
+
+
+			<!--Block footer-->
+			<footer class="pied">
+				<ul class="pied-nav">
+					<li><a href="#" class="pied-nav__lien"></i>Conditions générales d'utilisation</a></li>
+					<li><a href="#" class="pied-nav__lien"></i>Politique de Protection des données personnelles</a></li>
+					<li><a href="mailto:contact@ohmyfoot.fr" class="pied-nav__lien">Contact</a></li>
+				</ul>
+			</footer>
+			<!--Fin block footer-->
+		<div></div>
+	</body>
+</html>
