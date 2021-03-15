@@ -287,6 +287,7 @@ ul {
 
 .produit-item {
   width: 30%;
+  min-width: 250px;
   height: 270px;
   margin: 0.8rem;
   padding: 0.4rem;
@@ -369,15 +370,6 @@ ul {
   border-radius: 0 0.8rem 0 0.8rem;
   -webkit-box-shadow: 0 3px 3px rgba(24, 47, 115, 0.2);
           box-shadow: 0 3px 3px rgba(24, 47, 115, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
 }
 
 @media only screen and (max-width: 768px) {
@@ -386,75 +378,39 @@ ul {
   }
 }
 
-.fichetec__box {
-  width: 40%;
+.fichetec__appareil {
+  width: 100%;
   height: 250px;
   margin: 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
-  .fichetec__box {
+  .fichetec__appareil {
     width: 90%;
   }
 }
 
-.fichetec__box img {
-  width: 100%;
+.fichetec .cameras-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.fichetec .cameras-item img {
+  width: 40%;
   border: 1px solid #182F73;
   border-radius: 0 0.8rem 0 0.8rem;
 }
 
 @supports ((-o-object-fit: cover) or (object-fit: cover)) {
-  .fichetec .card01__box img {
+  .fichetec .cameras-item img {
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
   }
-}
-
-.fichetec__fiche {
-  width: 55%;
-  margin: 0;
-  padding: 0.5rem 0 0.5rem 0;
-}
-
-.fichetec__fiche__marque {
-  font-size: 1.5rem;
-  text-align: left;
-  width: 100%;
-  margin-bottom: 0.3rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .fichetec__fiche__marque {
-    font-size: 1.8rem;
-    margin: 0.5rem 1.5rem;
-  }
-}
-
-.fichetec__fiche__texte {
-  width: 100%;
-  height: 2rem;
-  font-size: 0.8rem;
-  margin-bottom: 0.4rem;
-}
-
-.card01__fiche__btn {
-  font-size: 700;
-  font-weight: bold;
-  width: 8rem;
-  height: 2.5rem;
-  color: #182F73;
-  border: 0;
-  border-radius: 0 0.6rem 0.6rem 0;
-  background: #99e2d0;
-}
-
-.card01__fiche__btn:hover {
-  cursor: pointer;
-  background: #182F73;
-  color: #fff;
 }
 
 .pied {

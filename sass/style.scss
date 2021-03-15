@@ -241,6 +241,7 @@ ul {
 
 .produit-item {
     width: 30%;
+    min-width: 250px;
     height: 270px;
     margin: 0.8rem;
     padding: 0.4rem;
@@ -300,68 +301,31 @@ ul {
     border: $bordbox;
     border-radius: 0 0.8rem 0 0.8rem;
     box-shadow: 0 3px 3px rgba($primary, 0.2);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: flex-start;
     @media #{$small-down} {
         width: 100%;
     }
-    &__box {
-        width: 40%;
+    &__appareil {
+        width: 100%;
         height: 250px;
         margin: 0.5rem;
         @media #{$small-down} {
             width: 90%;
         }
     }
-    &__box img {
-        width: 100%;
+    .cameras-item {
+        display: flex;
+        justify-content: space-around;
+    }
+    .cameras-item img {
+        width: 40%;
         border: $bordbox;
         border-radius: 0 0.8rem 0 0.8rem;
     }
     @supports(object-fit: cover) {
-        .card01__box img {
+        .cameras-item img {
             object-fit: cover;
             object-position: center; 
         }
-    }
-    &__fiche {
-        width: 55%;
-        margin: 0;
-        padding: 0.5rem 0 0.5rem 0;
-        &__marque {
-            font-size: 1.5rem;
-            text-align: left;
-            width: 100%;
-            margin-bottom: 0.3rem;
-            @media #{$small-down} {
-                font-size: 1.8rem;
-                margin: 0.5rem 1.5rem;
-            }
-        }
-        &__texte {
-            width: 100%;
-            height: 2rem;
-            font-size: 0.8rem;
-            margin-bottom: 0.4rem;
-        }
-    }
-}
-
-.card01__fiche__btn {
-    font-size: 700;
-    font-weight: bold;
-    width: 8rem;
-    height: 2.5rem;
-    color: $primary;
-    border: 0;
-    border-radius: 0 0.6rem 0.6rem 0;
-    background: $tertiary;
-    &:hover {
-        cursor: pointer;
-        background: $primary;
-        color: $white;
     }
 }
 
