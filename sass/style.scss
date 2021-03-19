@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
 
-@import "libs/mixins.scss";
 @import "libs/responsives.scss";
 
 
@@ -49,7 +48,7 @@ ul {
 
 .entete {
     width: 80%;
-    height: 30hv;
+    height: 20hv;
     position: relative;
     margin: auto;
     padding: 1rem;
@@ -80,7 +79,8 @@ ul {
             min-width: 200px;
         }
         @media #{$small-down} {
-            margin: auto;
+            width: 100%;
+            margin-left: 0;
             text-align: center;
         }
     }
@@ -154,6 +154,7 @@ ul {
             width: 40%;
             margin-left: -40%;
             transition: all 0.4s ease-in-out;
+            z-index: 1000;
         }
         &__list {
             list-style: none;
@@ -185,7 +186,8 @@ ul {
                 color: $white;
             }
             & a:active {
-                color: $white;
+                color: $primary;
+                background: $tertiary;
             }
         } 
     }
@@ -286,6 +288,7 @@ ul {
         font-size: 0.95rem;
         font-weight: 700;
         padding: 0.3rem;
+        box-shadow: 0 3px 3px rgba($primary, 0.6);
         &:hover {
             cursor: pointer;
             background: $primary;
@@ -295,32 +298,82 @@ ul {
 }
 
 .fichetec {
-    width: 80%;
-    margin: 2rem auto;
+    width: 70%;
+    margin: 1.5rem auto;
     padding: 0.5rem;
     border: $bordbox;
     border-radius: 0 0.8rem 0 0.8rem;
-    box-shadow: 0 3px 3px rgba($primary, 0.2);
+    box-shadow: 0 3px 3px rgba($primary, 0.6);
     @media #{$small-down} {
-        width: 100%;
+        width: 90%;
     }
     &__appareil {
         width: 100%;
-        height: 250px;
-        margin: 0.5rem;
         @media #{$small-down} {
-            width: 90%;
+            width: 100%;
         }
     }
     .cameras-item {
+        width: 100%;
         display: flex;
         justify-content: space-around;
+        position: relative;
+        @media #{$small-down} {
+            flex-direction: column;;
+            text-align: left;
+        }
+        &__img {
+            width: 40%;
+            margin-right: 0.5rem;
+            border: $bordbox;
+            border-radius: 0 0.8rem 0 0.8rem;
+            @media #{$small-down} {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 1rem;
+                z-index: 10;
+            }
+        }
+        &__bouton {
+            position: absolute;
+            bottom: -1.2rem;
+            right: 1rem;
+            border: $bordbox;
+            border-radius: 0 0.3rem 0 0.3rem;
+            background: $tertiary;
+            color: $primary;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 0.3rem;
+            box-shadow: 0 3px 3px rgba($primary, 0.6);
+            &:hover {
+                cursor: pointer;
+                color: $white;
+                background: $primary;
+            }
+        }
+        &__name {
+            font-size: 2rem;
+        }
+        &__titre {
+            font-weight: 700;
+            margin: 0.8rem 0 0.1rem 0;
+        }
+        &__descr {
+            font-size: 0.9rem;
+        }
+        &__lenses {
+            width: 40%;
+            margin-top: 0.8rem;
+            font-size: 1rem;
+            text-align: right;
+        }
+        &__price {
+            font-weight: 700;
+            margin-top: 1rem;
+        }
     }
-    .cameras-item img {
-        width: 40%;
-        border: $bordbox;
-        border-radius: 0 0.8rem 0 0.8rem;
-    }
+    
     @supports(object-fit: cover) {
         .cameras-item img {
             object-fit: cover;
@@ -355,13 +408,13 @@ ul {
             padding: 0.5rem;
             border-radius: 0 0.6rem 0 0.6rem;
             @media #{$small-down} {
-                margin: 0.1rem;
+                margin: 0;
             }
             &:hover {
-                color: $secondary;
+                color: $white;
                 background:$primary
             }
-            &:visited {
+            &:active {
             color: $primary;
             }
         }

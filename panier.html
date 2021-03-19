@@ -10,17 +10,11 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 
         <script src="https://kit.fontawesome.com/f03f98bc68.js" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="server.js" defer></script>
-		<script type="text/javascript" src="app.js" defer></script>
-		<script type="text/javascript" src="./controllers/camera.js" defer></script>
-		<script type="text/javascript" src="./models/Camera.js" defer></script>
-		<script type="text/javascript" src="./routes/camera.js" defer></script>
 
-		
 		<title>Panier | Oriphoto by Orinoco</title>
 	</head>
 	
-	<body>
+	<body onLoad="myOnLoad">
 		<div class="block-page">
 			<!--Bloc header-->	
 			<header class="entete">
@@ -45,27 +39,22 @@
 
 			<!--Block panier-->
 			<div>
-				<h1>Mon panier</h1>
+				<h1 class="boutique__heading">Mon panier</h1>
 			</div>
 
 			<!--fin block panier-->
 
-
-
-
-
-
-
-
 			<!--Block footer-->
 			<footer class="pied">
-				<ul class="pied-nav">
-					<li><a href="#" class="pied-nav__lien"></i>Conditions générales d'utilisation</a></li>
-					<li><a href="#" class="pied-nav__lien"></i>Politique de Protection des données personnelles</a></li>
-					<li><a href="mailto:contact@ohmyfoot.fr" class="pied-nav__lien">Contact</a></li>
+				<ul class="pied__nav">
+					<li><a href="#" class="pied__nav__lien"></i>Conditions générales d'utilisation</a></li>
+					<li><a href="#" class="pied__nav__lien"></i>Politique de Protection des données personnelles</a></li>
+					<li><a href="mailto:contact@oriphoto.fr" class="pied__nav__lien">Contact</a></li>
 				</ul>
 			</footer>
 			<!--Fin block footer-->
-		<div></div>
+			<script src="./javascript/utils.js" type="text/javascript"></script>
+			<script src="./javascript/produit.js" type="text/javascript"></script>
+		</div>
 	</body>
 </html>

@@ -35,7 +35,7 @@ ul {
 
 .entete {
   width: 80%;
-  height: 30hv;
+  height: 20hv;
   position: relative;
   margin: auto;
   padding: 1rem;
@@ -76,7 +76,8 @@ ul {
 
 @media only screen and (max-width: 768px) {
   .entete__logo {
-    margin: auto;
+    width: 100%;
+    margin-left: 0;
     text-align: center;
   }
 }
@@ -167,6 +168,7 @@ ul {
     margin-left: -40%;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    z-index: 1000;
   }
 }
 
@@ -217,7 +219,8 @@ ul {
 }
 
 .nav__menu__list a:active {
-  color: #fff;
+  color: #182F73;
+  background: #99e2d0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -354,6 +357,8 @@ ul {
   font-size: 0.95rem;
   font-weight: 700;
   padding: 0.3rem;
+  -webkit-box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
+          box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
 }
 
 .produit-item__bouton:hover {
@@ -363,45 +368,111 @@ ul {
 }
 
 .fichetec {
-  width: 80%;
-  margin: 2rem auto;
+  width: 70%;
+  margin: 1.5rem auto;
   padding: 0.5rem;
   border: 1px solid #182F73;
   border-radius: 0 0.8rem 0 0.8rem;
-  -webkit-box-shadow: 0 3px 3px rgba(24, 47, 115, 0.2);
-          box-shadow: 0 3px 3px rgba(24, 47, 115, 0.2);
+  -webkit-box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
+          box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
 }
 
 @media only screen and (max-width: 768px) {
   .fichetec {
-    width: 100%;
+    width: 90%;
   }
 }
 
 .fichetec__appareil {
   width: 100%;
-  height: 250px;
-  margin: 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
   .fichetec__appareil {
-    width: 90%;
+    width: 100%;
   }
 }
 
 .fichetec .cameras-item {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
 }
 
-.fichetec .cameras-item img {
+@media only screen and (max-width: 768px) {
+  .fichetec .cameras-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+}
+
+.fichetec .cameras-item__img {
   width: 40%;
+  margin-right: 0.5rem;
   border: 1px solid #182F73;
   border-radius: 0 0.8rem 0 0.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .fichetec .cameras-item__img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    z-index: 10;
+  }
+}
+
+.fichetec .cameras-item__bouton {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 1rem;
+  border: 1px solid #182F73;
+  border-radius: 0 0.3rem 0 0.3rem;
+  background: #99e2d0;
+  color: #182F73;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.3rem;
+  -webkit-box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
+          box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
+}
+
+.fichetec .cameras-item__bouton:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #182F73;
+}
+
+.fichetec .cameras-item__name {
+  font-size: 2rem;
+}
+
+.fichetec .cameras-item__titre {
+  font-weight: 700;
+  margin: 0.8rem 0 0.1rem 0;
+}
+
+.fichetec .cameras-item__descr {
+  font-size: 0.9rem;
+}
+
+.fichetec .cameras-item__lenses {
+  width: 40%;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.fichetec .cameras-item__price {
+  font-weight: 700;
+  margin-top: 1rem;
 }
 
 @supports ((-o-object-fit: cover) or (object-fit: cover)) {
@@ -458,16 +529,16 @@ ul {
 
 @media only screen and (max-width: 768px) {
   .pied__nav__lien {
-    margin: 0.1rem;
+    margin: 0;
   }
 }
 
 .pied__nav__lien:hover {
-  color: #dbdbdb;
+  color: #fff;
   background: #182F73;
 }
 
-.pied__nav__lien:visited {
+.pied__nav__lien:active {
   color: #182F73;
 }
 /*# sourceMappingURL=style.css.map */
