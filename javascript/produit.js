@@ -41,15 +41,28 @@ const showCamera = async() => {
     let select = document.createElement("select");
     select.classList.add("cameras-item__lenses");
 
-    window.onload = () => {
+    /*const {lenses} = camera;
+    let option = HTMLOptionElement;
+    select.innerHTML = lenses.map(lenses => `<option>lenses[i]</option>`);*/
+
+    /*const {lenses} = camera;
+    let option = HTMLOptionElement;
+    for (let i = 0; i < lenses.length; i++) {
+        select.innerHTML = `<option>${lenses[i]}</option>`;
+        console.log(lenses[i]);
+    };*/
+
+
+    /*window.onload = () => {
         const {lenses} = camera;
 
-        lenses.forEach( element => {
+        lenses.forEach(element => {
                 let option = document.createElement("option");
             document.querySelector("select").appendChild(option);
             optionTag.innerHTML = element;
+            console.log(element);
         });
-    };
+    };*/
 
     let price = document.createElement("p");
     price.classList.add("cameras-item__price");
@@ -67,6 +80,7 @@ const showCamera = async() => {
         div.appendChild(description);
         div.appendChild(label);
         div.appendChild(select);
+            //select.appendChild(option);
         div.appendChild(price);
 
     item.appendChild(abtn);
