@@ -259,6 +259,10 @@ ul {
     @media #{$small-down} {
         width: 90%;
     }
+    @media #{$medium-down && $small-up} {
+        width: 70%;
+        margin: 1rem auto,
+    }
     &__img {
         width: 100%;
         height: 190px;
@@ -269,6 +273,9 @@ ul {
         @supports(object-fit: cover) {
             object-fit: cover;
             object-position: center; 
+        }
+        @media #{$medium-down && $small-up} {
+            width: 100%;
         }
     }
     &__name {
@@ -420,4 +427,7 @@ ul {
         }
     }
 }
- 
+.panier {
+    width: 100%;
+    padding: 2rem;
+}

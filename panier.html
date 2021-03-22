@@ -18,7 +18,7 @@
 		<div class="block-page">
 			<!--Bloc header-->	
 			<header class="entete">
-				<div class="entete__logo__grand"><img src="logo/oriphoto_grand.png" alt="logo de l'application appareil photo vintage par oriphoto"></div>
+				<div class="entete__logo__grand"><img src="logo/oriphoto.png" alt="logo de l'application appareil photo vintage par oriphoto"></div>
 				<p class="entete__panier"><a href="panier.html"><i class="fas fa-shopping-cart"></i></a></p>
 			</header>
 			<!--Fin bloc header-->
@@ -30,7 +30,7 @@
 				<nav class="nav__menu" id="nav">
 					<ol class="nav__menu__list">
 						<li><a href="index.html" class="nav__menu__list__link"><i class="fas fa-camera-retro"></i> Boutique</a></li>
-						<li><a href="panier.html" class="nav__menu__list__link"><i class="fas fa-shopping-cart"></i> Panier</a></li>
+						<!--<li><a href="panier.html" class="nav__menu__list__link"><i class="fas fa-shopping-cart"></i> Panier</a></li>-->
 						<li><a href="commande.html" class="nav__menu__list__link"><i class="fas fa-edit"></i> Commande</a></li>
 					</ol>
 				</nav>
@@ -39,7 +39,55 @@
 
 			<!--Block panier-->
 			<div>
-				<h1 class="boutique__heading">Mon panier</h1>
+				<div class="boutique">
+					<h1 class="boutique__heading">Mon panier</h1>
+					<br>
+					<table class="panier">
+					  <thead>
+						<tr>
+						  <th scope="col">#</th>
+						  <th scope="col">Produit</th>
+						  <th scope="col">Quantité</th>
+						  <th scope="col">Ajouter/retirer</th>
+						  <th scope="col">Total</th>
+						</tr>
+					  </thead>
+					  <tbody id="items"></tbody>
+					  <tfoot>
+						<tr id="footer">
+						  <th scope="row" colspan="5">Panier vide • Commencez vos achats</th>
+						</tr>
+					  </tfoot>
+					</table>
+				  </div>
+			  
+				  <template id="template-footer">
+					  <th scope="row" colspan="2">Total productos</th>
+					  <td>10</td>
+					  <td>
+						  <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+							  vaciar todo
+						  </button>
+					  </td>
+					  <td class="font-weight-bold">$ <span>5000</span></td>
+				  </template>
+				  
+				  <template id="template-carrito">
+					<tr>
+					  <th scope="row">id</th>
+					  <td>Café</td>
+					  <td>1</td>
+					  <td>
+						  <button class="btn btn-info btn-sm">
+							  +
+						  </button>
+						  <button class="btn btn-danger btn-sm">
+							  -
+						  </button>
+					  </td>
+					  <td>$ <span>500</span></td>
+					</tr>
+				  </template>
 			</div>
 
 			<!--fin block panier-->
