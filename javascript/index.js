@@ -31,17 +31,6 @@ const displayProduits = async() => {
                 )
             ).join('')
     );
-
-   let btn = document.getElementById("test")
 };
-
-/*function test(e,produit) {
-    e.preventDefault();
-    console.log(produit);
-    window.location.href =
-        `
-            produit.html?id=${produit._id}
-        `
-}*/
 
 displayProduits(); //Pour afficher les résultats de la recherche

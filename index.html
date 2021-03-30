@@ -11,7 +11,7 @@
 
         <script src="https://kit.fontawesome.com/f03f98bc68.js" crossorigin="anonymous"></script>
 
-		<title>Oriphoto From Scratch</title>
+		<title>Appareils photo vintage | Oriphoto by Orinoco</title>
 
 	</head>
 
@@ -25,7 +25,7 @@
 			<!--Fin bloc header-->
 
 			<!--Block Navigation-->
-			<div class="nav">
+			<nav class="nav">
 				<input type="checkbox" class="nav__btn" id="nav__btn">
 				<label for="nav__btn" class="nav__label"><i class="fas fa-bars nav__bars"></i></label>
 				<nav class="nav__menu" id="nav">
@@ -35,20 +35,32 @@
 						<li><a href="commande.html" class="nav__menu__list__link"><i class="fas fa-edit"></i> Commande</a></li>
 					</ol>
 				</nav>
-			</div>
+			</nav>
 			<!--Fin Block Navigation-->
 			<!--Boutique-->
-			<div id="boutique" class="boutique">
+			<section id="boutique" class="boutique">
 				<h1 class="boutique__heading">Les plus beau appareils photo vintage</h1>
 				<h2 class="boutique__subtitre">Les rêves des photographes professionnels et amateurs</h2>
 
-				<ul id="results" class="boutique__results">
-				</ul>
-			</div>
+				<div id="results" class="boutique__results">
+				</div>
+			</section>
 			<!--Fin section boutique-->
 
-			 <!--Block footer-->
-			 <footer class="pied">
+			<template id="produits" class="boutique__produits">
+				<div class="produit-item">
+					<img src="" alt="" class="produit-item__img">
+					<div class="card-body">
+						<h3 class="produit-item__name">Appareil</h3>
+						<p class="produit-item__price">Prix</p>
+						<button class="produit-item__bouton" id="produit-item__bouton">Plus de détails</button>
+					</div>
+				</div>
+			</template>
+
+
+			<!--Block footer-->
+			<footer class="pied">
 				<ul class="pied__nav">
 					<li><a href="#" class="pied__nav__lien"></i>Conditions générales d'utilisation</a></li>
 					<li><a href="#" class="pied__nav__lien"></i>Politique de Protection des données personnelles</a></li>

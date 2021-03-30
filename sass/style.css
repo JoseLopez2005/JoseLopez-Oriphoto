@@ -164,8 +164,8 @@ ul {
     position: absolute;
     top: 4rem;
     left: 0;
-    width: 40%;
-    margin-left: -40%;
+    width: 50%;
+    margin-left: -50%;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     z-index: 1000;
@@ -322,7 +322,7 @@ ul {
 
 @media only screen and (max-width: 991px) {
   .produit-item {
-    width: 70%;
+    width: 90%;
     margin: 1rem auto;
   }
 }
@@ -345,12 +345,6 @@ ul {
   }
 }
 
-@media only screen and (max-width: 991px) {
-  .produit-item__img {
-    width: 100%;
-  }
-}
-
 .produit-item__name {
   margin-top: 0.5rem;
 }
@@ -361,7 +355,7 @@ ul {
 
 .produit-item__bouton {
   position: absolute;
-  bottom: -0.4rem;
+  bottom: -0.6rem;
   right: 1rem;
   border: 1px solid #182F73;
   border-radius: 0 0.3rem 0 0.3rem;
@@ -555,8 +549,68 @@ ul {
   color: #182F73;
 }
 
-.panier {
+#panier-liste {
+  width: 80%;
+  margin: auto;
+}
+
+#panier-liste__table {
   width: 100%;
-  padding: 2rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: .25rem;
+}
+
+#panier-liste__table:active {
+  display: block;
+  top: -100%;
+}
+
+.form {
+  width: 60%;
+  margin: 1rem auto;
+  padding: 1rem 0.5rem 2.2rem 0.5rem;
+  background: rgba(219, 219, 219, 0.5);
+  border: 1px solid #182F73;
+  border-radius: 0 0.6rem 0 0.6rem;
+  position: relative;
+  -webkit-box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
+          box-shadow: 0 3px 3px rgba(24, 47, 115, 0.6);
+}
+
+.form__titre {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.form__group__champs {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  border: 1px solid #182F73;
+  border-radius: 0 0.3rem 0 0.3rem;
 }
 /*# sourceMappingURL=style.css.map */
