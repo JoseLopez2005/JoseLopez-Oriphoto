@@ -7,13 +7,6 @@ const fetchProduits = async() => {
     produits = await fetch('http://localhost:3000/api/cameras').then((res) => res.json());
 };
 
-/* La fonction précédent est équivalente à :
-fetchProduits();
-async function fetchProduits() {
-    produits = await fetch('http://localhost:3000/api/cameras').then(res => res.json());
-};
-*/
-
 const displayProduits = async() => {
     await fetchProduits();
 
@@ -24,7 +17,7 @@ const displayProduits = async() => {
                     <li class="produit-item"><a href="produit.html?id=${produit._id}">
                         <img class="produit-item__img" src="${produit.imageUrl}" />
                         <h3 class="produit-item__name">${produit.name}<h3>
-                        <p class="produit-item__price">Prix : ${numberWithSpace(produit.price)} €</p>
+                        <p class="produit-item__price">Prix : ${numberWithSpace(produit.price / 100)} €</p>
                         <button onclick="test(event,${produit})" class="produit-item__bouton" id="produit-item__bouton">Plus de détails</button>
                     </a></li>
                 `           

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta desciption="Appareil photo vintage. Si vous êtes photographe professionnel ou amateur, cet appareil photo a été fait pour vous. Oriphoto, le moins cher.">
+		<meta keywords="appareil photo vintage, appareil photo Zeiss Ikon, photographie professionnelle, photographie amateur">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="sass/style.css" media="all">
+		<link rel="stylesheet" href="sass-initial/style.css" media="all">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <script src="https://kit.fontawesome.com/f03f98bc68.js" crossorigin="anonymous"></script>
+		
+		<title>Appareils fiche | Oriphoto by Orinoco</title>
+	</head>
+	<body>
+		<div class="block-page">
+			<!--Bloc header-->	
+			<header class="entete">
+				<div class="entete__logo"><a href="index.html"><img src="logo/oriphoto.png" alt="logo de l'application appareil photo vintage par oriphoto"></a></div>
+				<p class="entete__panier"><a href="panier.html"><i class="fas fa-shopping-cart"></i></a></p>
+			</header>
+			<!--Fin bloc header-->
+
+			<!--Block Navigation-->
+			<div class="nav">
+				<input type="checkbox" class="nav__btn" id="nav__btn">
+				<label for="nav__btn" class="nav__label"><i class="fas fa-bars nav__bars"></i></label>
+				<nav class="nav__menu" id="nav">
+					<ol class="nav__menu__list">
+						<li><a href="index.html" class="nav__menu__list__link"><i class="fas fa-camera-retro"></i> Boutique</a></li>
+						<li>
+							<a href="basket.html" class="nav__menu__list__link"><i class="fas fa-shopping-cart"></i> Panier</a>
+						</li>
+						<li><a href="order-confirm.html" class="nav__menu__list__link"><i class="fas fa-edit"></i> Commande</a></li>
+					</ol>
+				</nav>
+			</div>
+			<!--Fin Block Navigation-->
+			<!--Block fiche produit-->
+			<div id="error">
+				<i id="error__logo" class="fas fa-exclamation-triangle"></i>
+				<p id="error__msg">Désolé une erreur avec l'API est survenue, ou la page démandée n'existe pas ! Veuillez réesayer</p>
+			</div>
+			<section id="section" class="fichetec">
+				<div class="fichetec__appareil">
+					<div class="cameras-item" id="items">
+						<img src="#" id="imgProduct" alt="Photo du produit" class="cameras-item__img">
+						<div>
+							<h3 id="nameProduct" class="cameras-item__name">Nom du produit</h3>
+							<p class="cameras-item__titre">Description :</p>
+							<p id="descriptionProduct" class="cameras-item__descrip">
+							</p>
+							<label for="optionSelect" class="cameras-item__titre">Lentilles :</label>
+							<select name="option" id="optionSelect" class="cameras-item__lenses">
+								<option value="">Faites votre choix</option>
+							</select>
+							<p class="cameras-item__price" id="priceProduct">Prix : </p>
+						</div>
+						<button class="cameras-item__bouton" id="ajouterProduitPanier">Ajouter au panier</button>
+					</div>
+				</div>
+			</section>
+
+			<!--Block footer-->
+			<footer class="pied">
+				<ul class="pied__nav">
+					<li><a href="#" class="pied__nav__lien"></i>Conditions générales d'utilisation</a></li>
+					<li><a href="#" class="pied__nav__lien"></i>Politique de Protection des données personnelles</a></li>
+					<li><a href="mailto:contact@oriphoto.fr" class="pied__nav__lien">Contact</a></li>
+				</ul>
+			</footer>
+			<!--Fin block footer-->
+		</div>
+		<script src="js/products.js"></script>
+		<script src="js/utils.js" type="text/javascript"></script>
+		<script>
+			detailProduit();
+			addPanier()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+@mixin loader($color: $primary, $size: 10px) {
+    width: $size;
+    height: $size;
+    border-top-color: $color;
+    border-left-color: $color;
+}

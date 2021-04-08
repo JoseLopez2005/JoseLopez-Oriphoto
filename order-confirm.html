@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<meta desciption="Faire des photos comme avant? Oriphoto est l'appspancation pour combler vos envies. Appareils photo vintage pour collectionneurs sur Oriphoto by Orinoco.">
+		<meta keywords="appareil photo vintage, outils pour les photograhes, photographie professionnelle, photographie amateur, appareil photo pour tous, photos à l'ancienne">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="sass/style.css" media="all">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <script src="https://kit.fontawesome.com/f03f98bc68.js" crossorigin="anonymous"></script>
+
+		<title>Appareils photo confirmation | Oriphoto by Orinoco</title>
+	</head>
+	<body class="order-confirm">
+		<header class="order-confirm__topbar">
+			<h1>
+				<img class="order-confirm__topbar__logo" src="img/orinoco-logo.png" alt="Logo d'Orinoco">
+			</h1>
+		</header>
+		<section class="order-confirm__card">
+			<div class="order-confirm__card__resume">
+				<i class="fas fa-check"></i>
+				<h2 class="order-confirm__card__resume__congrat">Merci pour votre achat <span id="lastName"></span> !</h2>
+				<div class="order-confirm__card__resume__info">
+					<p>numéro de commande : <span id="orderId"></span></p>
+				</div>
+			</div>
+			<nav class="order-confirm__card__nav">
+				<p>Pour revenir à l'accueil de notre boutique cliquez sur ce lien <a href="index.html">Accueil</a></p>
+			</nav>
+		</section>
+		<footer>
+			<p>Site réalisé dans le cadre du projet 5 du parcours d'<a href="https://openclassrooms.com/">Openclassrooms</a> par Nicolas Lachise</p>
+		</footer>
+		<script src="js/products.js"></script>
+		<script>resultOrder()</script>
+	</body>
+</html>

@@ -54,7 +54,6 @@ const showCamera = async() => {
         select.innerHTML += `<option>${lens}</option>`
     });
 
-
     let price = document.createElement("p");
     price.classList.add("cameras-item__price");
     price.textContent = 'Prix : '+numberWithSpace(camera.price)+'€';
@@ -86,7 +85,7 @@ const showCamera = async() => {
 
 showCamera();
 
-let abtn = document.getElementByClassName("cameras-item__bouton")
+/*let abtn = document.getElementByClassName("cameras-item__bouton")
 
 function test(e,produit) {
     e.preventDefault();
@@ -95,43 +94,4 @@ function test(e,produit) {
         `
             panier.html?id=${produit._id}
         `
-}
-
-
-/*class Panier{
-
-    //Ajouter produit au panier
-    acheterProduit(e) {
-        e.preventDefault();
-        if(e.target.classList.contains('cameras-item__bouton')) {
-            const produit = e.target.parentElement.parentElement;
-            this.lireDonneesProduits(produit);
-        }
-    }
-
-    lireDonneesProduits(produit) {
-        const infoProduit = {
-            img : produit.querySelector('img').src,
-            marque : produit.querySelector('h3').textContent,
-            prix : produit.querySelector('p').textContent,
-            id : produit.querySelector('button').getAttribute('data-id'),
-            quantité : 1
-        }
-        this.ajouterPanier(infoProduit);
-    }
-
-    ajouterPanier(produit) {
-        const row = document.createElement('tr')
-        row.innerHTML = `
-            <td>
-                <img src"${camera.imageUrl}" width=100>
-            </td>
-            <td>${camera.name}</td>
-            <td>${camera.price}</td>
-            <td>
-                <a href="#" class="effacer-produit fas fa-times-circle" data-id="${camera._id}"/>
-            </td>
-        `;
-        listeProduit.appendChild(row);
-    }
 }*/

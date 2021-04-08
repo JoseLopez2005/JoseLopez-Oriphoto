@@ -427,21 +427,21 @@ ul {
 }
 
 
-#panier-liste {
+.panier {
     width: 80%;
     margin: auto;
     &__table {
         width: 100%;
-        padding: .5rem 0;
+        padding: .5rem;
         margin: .125rem 0 0;
         font-size: 1rem;
-        color: #212529;
+        color: $primary;
         text-align: left;
         list-style: none;
-        background-color: #fff;
+        background: rgba($secondary, 0.5);
         background-clip: padding-box;
-        border: 1px solid rgba(0,0,0,.15);
-        border-radius: .25rem;
+        border: $bordbox;
+        border-radius: 0 0.6rem 0 0.6rem;
         &:active {
             display: block;
             top: -100%;

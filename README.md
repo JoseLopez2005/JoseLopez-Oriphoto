@@ -1,15 +1,15 @@
-# Orinoco #
+# P5-Orinoco-OpenclassroomsDW #
+Projet 5 du parcours développeur web d'Openclassrooms
 
-This is the back end server for Project 5 of the Junior Web Developer path.
+Le back-end du projet se situe dans le dossier JWDP5
 
-### Prerequisites ###
 
-You will need to have Node and `npm` installed locally on your machine.
+### Prerequis : ###
+Pour faire fonctionner ce projet, vous avez besoin de Node et npm d'installés sur votre machine
+
 
 ### Installation ###
+Clonez ce dépot, dans le dossier du back-end (JWDP5); lancez `npm install` dans votre console. Une fois tous les modules téléchargés, lancez `node server`dans la console.
+Par défaut le serveur fonctionne en localhost avec le port 3000 
 
-Clone this repo. From within the project folder, run `npm install`. You 
-can then run the server with `node server`. 
-The server should run on `localhost` with default port `3000`. If the
-server runs on another port for any reason, this is printed to the
-console when the server starts, e.g. `Listening on port 3001`.
+Si un autre port est utilisé => voir console "listening on port x" où x est le port utilisé
